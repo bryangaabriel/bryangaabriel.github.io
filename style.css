@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Sen:wght@400..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background: #1C2226;
+    
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 100px;
+}
+.logo{
+    width: 315px;
+    height: 75px;
+}
+.menu {
+    display: flex;
+    gap: 40px;
+}
+
+.menu-itens {
+    color: #FFF;
+    font-family: "Sen", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+.home{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;  
+    margin-bottom: 48px;
+    border-top: 0.4px solid #c7c7c7;
+}
+
+.home-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.text-two {
+    color: #FFF;
+    font-family: "Inter", sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+
+.titulo-text {
+    color: #FFF;
+    font-family: "Inter", sans-serif;
+    font-size: 68px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.text-three {
+    color: #FFF;
+    font-family: "Inter", sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.description {
+    width: 605px;
+    color: #FFF;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 28px;
+}
+
+.icon-media {
+    display: flex;
+    
+    gap: 10px;
+    margin-right: 16px;
+    margin-bottom: 40px;
+}
+
+.curriculo {
+    font-family: "Inter", sans-serif;
+    background: #248232;
+    padding: 10px 18px;
+    font-weight: 400;
+    color: #FFF;
+    margin-top: 12px;
+    border-radius: 5px;
+    border: 2px solid #248232;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+}
+
+.curriculo:hover {
+    transform: scale(1.05);
+}
+
+.fundo-logo {
+    object-fit: cover;
+    object-position: center;
+    width: 500px;
+    height: 500px;
+}
