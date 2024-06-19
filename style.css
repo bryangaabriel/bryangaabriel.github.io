@@ -5,47 +5,108 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Inter", sans-serif;
+}
+
+:root {
+    --bg-color: rgb(15, 15, 15);
+    --second-bg-color: #161616;
+    --text-color: #FFF;
+    --main-color: #248232;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--bg-color);
+    width: 50px;
 }
 
 body {
-    background: #1C2226;
+    background: var(--bg-color);
+    color: var(--main-color);
     
 }
 
 header {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 18px 100px;
+    z-index: 100;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px 9%;
+    background: rgba(0, 0, 0, 0.705);
+    backdrop-filter: blur(10px);
 }
 .logo{
-    width: 315px;
-    height: 75px;
-}
-.menu {
-    display: flex;
-    gap: 40px;
-}
-
-.menu-itens {
-    color: #FFF;
-    font-family: "Sen", sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    font-size: 30px;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 
+.logo:hover{
+    transform: scale(1.1);
+}
+
+.menu a {
+    font-size: 18px;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+    
+}
+.menu a:hover,
+.menu a.active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+#menu-icon {
+    font-size: 3rem;
+    color: var(--main-color);
+}
+
+span {
+    color: var(--main-color);
+}
+
+.logo span{
+    color: var(--main-color);
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 10rem;
+}
 
 .home{
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;  
-    margin-bottom: 48px;
     border-top: 0.4px solid #c7c7c7;
+    gap: 8rem;
 }
+
 
 .home-left {
     display: flex;
@@ -62,7 +123,7 @@ header {
 .text-two {
     color: #FFF;
     font-family: "Inter", sans-serif;
-    font-size: 25px;
+    font-size: 4rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -72,11 +133,12 @@ header {
 .titulo-text {
     color: #FFF;
     font-family: "Inter", sans-serif;
-    font-size: 68px;
+    font-size: 7rem;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    line-height: 1.3;
 }
+
 
 .text-three {
     color: #FFF;
@@ -85,6 +147,83 @@ header {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+.text-three span {
+    position: relative;
+
+}
+
+.text-three span::before{
+    content: "Desenvolvedor Web";
+    color: var(--main-color);
+    animation: words 20s infinite;
+}
+
+.text-three span::after{
+    content: "";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--bg-color);
+    right: -8px;
+    animation: cursor 0.6s infinite,escrevendo 20s steps(14) infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 2px solid var(--main-color);
+    }
+}
+
+@keyframes words{
+    0%,
+    20%{
+        content: "Desenvolvedor Web";
+    }
+    21%,
+    40%{
+        content: "Desenvolvedor Web";
+    }
+    41%,
+    60%{
+        content: "Desenvolvedor Web";
+    }
+    61%,
+    80%{
+        content: "Desenvolvedor Web";
+    }
+    81%,
+    100%{
+        content: "Desenvolvedor Web";
+    }
+}
+@keyframes escrevendo{
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95%{
+        width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%{
+        width: calc(100% + 8px);
+    }
+
 }
 
 .description {
@@ -97,12 +236,33 @@ header {
     margin-bottom: 28px;
 }
 
-.icon-media {
-    display: flex;
-    
-    gap: 10px;
-    margin-right: 16px;
-    margin-bottom: 40px;
+.home_img {
+    position: relative;
+    border-radius: 50%;
+    width: 32vw;
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.icon-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    font-size: 2rem;
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3 ease-in-out;
+}
+
+.icon-media a:hover{
+    color: white;
+    transform: scale(1.3)translateY(-5px);
+    background-color: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
 }
 
 .curriculo {
@@ -122,9 +282,116 @@ header {
     transform: scale(1.05);
 }
 
-.fundo-logo {
-    object-fit: cover;
-    object-position: center;
-    width: 500px;
-    height: 500px;
+.cabeça{
+    text-align: center;
+    font-size: 4rem;
 }
+.sobre{
+    background-color: var(--second-bg-color);
+}
+
+.sobre h2{
+    margin-bottom: 8rem;
+}
+
+.sobre_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.sobre_container .sobre_box{
+    flex: 1 1 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--bg-color);
+    padding: 1.5rem 1rem 2rem;
+    height: 300px;
+    border-radius: 2rem;
+    border: 3px solid var(--main-color);
+}
+
+.sobre_box i{
+    font-size: 3.5rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.sobre_box h3{
+    font-size: 1.3rem;
+}
+
+.sobre_box p{
+    font-size: 1.6rem;
+    margin: 0.5rem 0 1.5rem;
+    font-weight: 500;
+}
+
+.projetos{
+    background: var(--bg-color);
+}
+.projetos h2{
+    margin-bottom: 4rem;
+}
+.projetos_container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.projetos_container .projetos_box{
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    display:flex;
+    border-radius: 2rem;
+    border: 3px solid transparent;
+    transition: 0.5s ease-in-out;
+}
+.projetos_box:hover{
+    border: 3px solid var(--main-color)
+}
+
+.projetos_box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+}
+
+.projetos_box:hover img{
+    transform: scale(1.05);
+}
+
+.projetos_box .projeto_info{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 0 4rem;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    backdrop-filter: grayscale(100%);
+}
+
+.projetos_box .projeto_info:hover{
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: grayscale(0%);
+}
+
+.projeto_info h4{
+    font-size: 2rem;
+    color: var(--main-color);
+    font-weight: 800;
+}
+

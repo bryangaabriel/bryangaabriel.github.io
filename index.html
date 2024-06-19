@@ -5,51 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bryan Silva | Portfólio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <header>
-        <img class="logo" src="./img/BRYAN SILVA.svg" alt="logo">
+        <a href="#home" class="logo">BRYAN <span>SILVA</span></a>
+
+        
 
         <nav class="menu">
-            <a class="menu-itens" href="">Home</a>
-            <a class="menu-itens" href="">Sobre mim</a>
-            <a class="menu-itens" href="">Certificações</a>
-            <a class="menu-itens" href="">Projetos</a>
+            <a href="#home" class="active">Home</a>
+            <a href="#sobre" >Sobre mim</a>
+            <a href="#certificacoes" >Certificações</a>
+            <a href="#projetos" >Projetos</a>
         </nav>
     </header>
 
-    <section class="home">
-
-        <div class="home-left">
-            <div class="titulo">
-                <h2 class="text-two">Olá, meu nome é</h2>
-                <h1 class="titulo-text">BRYAN SILVA</h1>
-                <h2 class="text-three">Eu sou um Desenvolvendor Front-end</h2>
-                <p class="description">Sou um desenvolvedor front-end apaixonado por criar interfaces web atraentes e funcionais.</p>
-            </div>
-            <div class="icon-media">
-                <a href="//instagram.com/bryangaabriel/"><img src="./img/Social Icons instagram.svg" alt=""></a>
-                <a href="//www.linkedin.com/in/bryangsilva/"><img src="./img/Social Icons linkedin.svg" alt=""></a>
-                <a href="//x.com/bryangaabriel"><img src="./img/Social Icons twitter.svg" alt=""></a>
-            </div>
-            <hr>
-            <br>
-            <div >
-                <a  href='https://www.freecodecamp.org/'><button class="curriculo">Download CV</button></a>
-            </div>
-        </div>
-        
-         <div class="home-right">
-            <div class="fundo-principal">
-            <img class="fundo-logo" src="./img/fundo para foto.svg" alt="">
-            </div>
-        </div>
-        
-        
-    </section>
-    
     <main>
-        
+        <section class="home" id="home">
+
+            <div class="home-left">
+                <div class="titulo">
+                    <h2 class="text-two">Olá, meu nome é</h2>
+                    <h1 class="titulo-text">BRYAN <span>SILVA</span></h1>
+                    <h3 class="text-three">Eu sou um <span></span></h3>
+                    <p class="description">Sou um desenvolvedor front-end apaixonado por criar interfaces web atraentes e funcionais.</p>
+                </div>
+                <div class="icon-media">
+                    <a href="https://www.instagram.com/bryangaabriel/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/bryangsilva/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://x.com/bryangaabriel"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+                <hr>
+                <br>
+                <div >
+                    <a  href='https://github.com/bryangaabriel'><button class="curriculo">GitHub <i class="fa-brands fa-github"></i></button></a>
+                </div>
+            </div>
+            
+             <div class="home-right">
+                <div class="fundo-principal">
+                <img class="home_img" src="https://images.unsplash.com/photo-1484807352052-23338990c6c6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                </div>
+            </div>
+            
+            
+        </section>
+
+        <section class="sobre" id="sobre">
+            <h2 class="cabeça">Sobre mim</h2>
+            <div class="sobre_container">
+                <div class="sobre_box">
+                    <i class="fa-solid fa-person"></i>
+                    <p>Olá! Meu nome é Bryan Silva e estou cursando Sistemas de Informação. Sou um desenvolvedor front-end apaixonado por criar interfaces web atraentes e funcionais. Atualmente, estou focado em aprimorar minhas habilidades em HTML, CSS e JavaScript.
+                        Minha jornada na programação começou na faculdade, onde descobri meu interesse por desenvolvimento web. Desde então, tenho me dedicado a aprender e dominar as tecnologias essenciais para criar experiências de usuário envolventes e eficientes.
+                        Minha motivação vem da satisfação de ver minhas criações ganharem vida na tela e da possibilidade de contribuir para soluções que possam facilitar a vida das pessoas. Meu objetivo de carreira é me tornar um desenvolvedor front-end especializado, capaz de trabalhar em projetos inovadores e impactantes.
+                        Estou animado para iniciar minha trajetória profissional e estou aberto a oportunidades que me permitam aprender e colaborar com outros profissionais da área.</p>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="projetos" id="projetos">
+            <h2 class="cabeça">Projetos</h2>
+            <div class="projetos_container">
+                <div class="projetos_box">
+                    <img src="https://portalpadrao.ufma.br/dted/imagens/construcao.png/@@images/image.png" alt="">
+                    <div class="projeto_info">
+                        <h4>EM CONSTRUÇÃO</h4>
+                    </div>
+                </div>
+                <div class="projetos_box">
+                    <img src="https://portalpadrao.ufma.br/dted/imagens/construcao.png/@@images/image.png" alt="">
+                    <div class="projeto_info">
+                        <h4>EM CONSTRUÇÃO</h4>
+                    </div>
+                </div>
+                <div class="projetos_box">
+                    <img src="https://portalpadrao.ufma.br/dted/imagens/construcao.png/@@images/image.png" alt="">
+                    <div class="projeto_info">
+                        <h4>EM CONSTRUÇÃO</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
